@@ -1,6 +1,8 @@
-let button = document.getElementById("btn");
+const buttonCalc = document.getElementById("btn");
+const buttonClear = document.querySelector(".reset");
 
-button.addEventListener('click', ()=>{
+
+buttonCalc.addEventListener('click', ()=>{
     const height = perseInt = parseInt(document.getElementById('height').value);
     const weight = perseInt = parseInt(document.getElementById('weight').value);
     const result = document.getElementById('output');
@@ -37,4 +39,9 @@ button.addEventListener('click', ()=>{
         alert("The form has Errors");
         result.innerHTML = "";
     }
+});
+
+buttonClear.addEventListener("click", function(){
+    document.getElementById('height').value  ="";
+    document.getElementById('weight').value  ="";
 });
